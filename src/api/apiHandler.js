@@ -50,4 +50,11 @@ export default {
       .then((res) => res.data)
       .catch(errorHandler);
   },
+
+  getIngredients() {
+    return service
+    .get("/api/ingredients")
+    .then((res) => res.data)
+    .catch(errorHandler);
+  }
 };
