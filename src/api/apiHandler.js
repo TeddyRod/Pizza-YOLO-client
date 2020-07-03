@@ -18,43 +18,71 @@ export default {
 
   signup(userInfo) {
     return service
-      .post("/api/signup", userInfo)
+      .post("/signup", userInfo)
       .then((res) => res.data)
       .catch(errorHandler);
   },
 
   signin(userInfo) {
     return service
-      .post("/api/signin", userInfo)
+      .post("/signin", userInfo)
       .then((res) => res.data)
       .catch(errorHandler);
   },
 
   isLoggedIn() {
     return service
-      .get("/api/isLoggedIn")
+      .get("/isLoggedIn")
       .then((res) => res.data)
       .catch(errorHandler);
   },
 
   logout() {
     return service
-      .get("/api/logout")
+      .get("/logout")
       .then((res) => res.data)
       .catch(errorHandler);
   },
 
   getItems() {
     return service
-      .get("/api/items")
+      .get("/items")
       .then((res) => res.data)
       .catch(errorHandler);
   },
 
   getIngredients() {
     return service
-    .get("/api/ingredients")
+    .get("/ingredients")
     .then((res) => res.data)
     .catch(errorHandler);
-  }
+  },
+
+  getIngredients() {
+    return service
+    .get("/ingredients")
+    .then((res) => res.data)
+    .catch(errorHandler);
+  },
+
+  getOneUser(data) {
+    return service
+    .get(`/user/${data}`, data)
+    .then((res) => res.data)
+    .catch(errorHandler);
+  },
+
+  updateOneUser(data) {
+    return service
+    .patch(`/user/${data}`, data)
+    .then((res) => res.data)
+    .catch(errorHandler);
+  },
+
+  deleteOneUser(data) {
+    return service
+    .delete(`/user/${data}`, data)
+    .then((res) => res.data)
+    .catch(errorHandler);
+  },
 };
