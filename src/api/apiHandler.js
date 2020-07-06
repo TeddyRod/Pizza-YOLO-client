@@ -51,16 +51,9 @@ export default {
       .catch(errorHandler);
   },
 
-  getIngredients() {
+  getUsers() {
     return service
-    .get("/ingredients")
-    .then((res) => res.data)
-    .catch(errorHandler);
-  },
-
-  getIngredients() {
-    return service
-    .get("/ingredients")
+    .get('/user')
     .then((res) => res.data)
     .catch(errorHandler);
   },
@@ -85,4 +78,28 @@ export default {
     .then((res) => res.data)
     .catch(errorHandler);
   },
+
+  getRecipes () {
+    return service
+    .get('/recipes')
+    .then((res) => res.data)
+    .catch(errorHandler);
+  },
+
+  getOneRecipe (data) {
+    return service
+    .get(`/recipes/${data}`, data)
+    .then((res) => res.data)
+    .catch(errorHandler);
+  },
+
+  getIngredients () {
+    return service
+    .get('/ingredients')
+    .then((res) => res.data)
+    .catch(errorHandler);
+  }
+
+
+  
 };
