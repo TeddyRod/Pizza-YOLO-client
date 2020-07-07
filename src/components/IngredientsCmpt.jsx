@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import apiHandler from "../api/apiHandler";
 
-import {objectToFormData} from "object-to-formdata";
-import {withRouter} from "react-router-dom";
-import {withUser} from "../components/Auth/withUser";
+// import {objectToFormData} from "object-to-formdata";
+// import {withRouter} from "react-router-dom";
+// import {withUser} from "../components/Auth/withUser";
 
 
 export class IngredientsCmpt extends Component {

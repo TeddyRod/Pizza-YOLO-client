@@ -58,6 +58,7 @@ export default {
     .catch(errorHandler);
   },
 
+
   getOneUser(data) {
     return service
     .get(`/user/${data}`, data)
